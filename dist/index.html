@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-cn">
+	<head>
+	<meta charset="UTF-8">
+	<title>QQ音乐练习</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script>
+		// 根据屏幕控制字体大小
+	    var baseWidth = 750,
+	        baseHeiht = 1280,
+	        baseFontSize = 100,
+	        newSize = 1,
+	        sacle = 1;
+
+	    var sacle = Math.min(window.innerWidth / baseWidth, window.innerHeight / baseHeiht),
+	        newSize = parseInt(sacle * 10000 * baseFontSize) / 10000;
+
+	    document.documentElement.style.fontSize = newSize + "px"; 
+	</script>
+</head>
+<body>
+	<div class="wrap page">
+	<div class="item page1">
+		<h2>QQ音乐 独家专区</h2>
+		<div class="tit"></div>
+		<div class="brand">
+			<ul>
+				<li class="brand1"><a href=""><img src="images/bnd_lone.png" alt=""></a></li>
+				<li class="brand2"><a href=""><img src="images/bnd_warner.png" alt=""></a></li>
+				<li class="brand3"><a href=""><img src="images/bnd_bin.png" alt=""></a></li>
+				<li class="brand4"><a href=""><img src="images/bnd_jvr.png" alt=""></a></li>
+				<li class="brand5"><a href=""><img src="images/bnd_yingh.png" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="item page2">
+		<h2>QQ音乐 独家专区</h2>
+		<div class="tit"></div>
+		<div class="songer_con">
+			<div class="ring"></div>
+			<ul class="songer">
+				<li class="songer1"><a href="javascript:;"><img src="images/songer_caiyl.jpg" alt=""></a></li>
+				<li class="songer2"><a href="javascript:;"><img src="images/songer_quanzl.jpg" alt=""></a></li>
+				<li class="songer3"><a href="javascript:;"><img src="images/songer_xietf.jpg" alt=""></a></li>
+				<li class="songer4"><a href="javascript:;"><img src="images/songer_zhangly.jpg" alt=""></a></li>
+				<li class="songer5"><a href="javascript:;"><img src="images/songer_zhoujl.jpg" alt=""></a></li>
+			</ul>
+			<div class="cicle">
+				<span class="cicle1"></span>
+				<span class="cicle2"></span>
+				<span class="cicle3"></span>
+			</div>
+		</div>
+	</div>
+	<div class="item page3">
+		<h2>QQ音乐 独家专区</h2>
+		<div class="tit"></div>
+		<div class="box" id="box">测试</div>
+	</div>
+</div>
+	<div class="wrap wrap_bg">
+	<div class="clouds">
+		<ul>
+			<li class="cloud_item1"></li>
+			<li class="cloud_item2"></li>
+			<li class="cloud_item3"></li>
+		</ul>
+	</div>
+	<div class="logo_contain">
+		<div class="sprout"></div>
+		<a href="javascript:;" class="logo"></a>
+	</div>
+	<div class="page_control">
+		<ul>
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</div>
+	<script src="js/iSlider.js"></script>
+<script>
+	new iSlider({
+        wrap:'.wrap',
+        item:'.item',
+        playClass:'play',
+        isVertical: false,
+        onslide:function (index) {
+                var oBox = document.getElementById('box');
+                console.log(oBox.innerHTML);
+           
+	        // document.querySelector('.page_control .active').className=''
+	        // document.querySelectorAll('.page_control li')[index].className='active';
+	        // document.getElementById('logo_contain').className='logo_contain step-'+(index + 1);
+    	}
+    });
+</script>
+</body>
+</html>
